@@ -18,7 +18,7 @@ namespace WebApplication1.Business
                 case ProductType.Book:
                     return new Book();
                 default:
-                    throw new ArgumentException("Geçersiz ürün türü.");
+                    throw new ArgumentException("Invalid product type.");
             }
         }
     }

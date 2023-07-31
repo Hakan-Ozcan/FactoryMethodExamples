@@ -4,12 +4,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        ArabaFabrikasi sedanFabrikasi = new SedanFabrikasi();
-        Araba sedanAraba = sedanFabrikasi.ArabaUret();
-        sedanAraba.Sur();
+        CarFactory sedanFactory = new SedanFactory();
+        Car.Car sedanAraba = sedanFactory.CreateCar();
+        sedanAraba.Drive();
 
-        ArabaFabrikasi suvFabrikasi = new SUVFabrikasi();
-        Araba suvAraba = suvFabrikasi.ArabaUret();
-        suvAraba.Sur();
+        CarFactory suvFactory = new SUVFactory();
+        Car.Car suvAraba = suvFactory.CreateCar();
+        suvAraba.Drive();
     }
 }

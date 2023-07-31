@@ -5,46 +5,46 @@ class Program
     static void Main(string[] args)
     {
         // Asker yaratmak için AskerFabrikasi kullanma
-        KarakterFabrikasi askerFabrikasi = new AskerFabrikasi();
-        Oyuncu asker = askerFabrikasi.KarakterYarat();
-        Console.WriteLine($"Yeni karakter oluşturuldu: {asker.Ad}");
-        asker.Saldir();
-        asker.Savun();
+        CharacterFactory soldierFactory = new SoldierFactory();
+        Player soldier = soldierFactory.CreateCharacter();
+        Console.WriteLine($"New character created: {soldier.Name}");
+        soldier.Attack();
+        soldier.ToDefend();
 
         Console.WriteLine();
 
         // Muhafız yaratmak için MuhafizFabrikasi kullanma
-        KarakterFabrikasi muhafizFabrikasi = new MuhafizFabrikasi();
-        Oyuncu muhafiz = muhafizFabrikasi.KarakterYarat();
-        Console.WriteLine($"Yeni karakter oluşturuldu: {muhafiz.Ad}");
-        muhafiz.Saldir();
-        muhafiz.Savun();
+        CharacterFactory GuardianFactory = new GuardianFactory();
+        Player guardian = GuardianFactory.CreateCharacter();
+        Console.WriteLine($"New character created: {guardian.Name}");
+        guardian.Attack();
+        guardian.ToDefend();
 
         Console.WriteLine();
 
         // Ninja yaratmak için NinjaFabrikasi kullanma
-        KarakterFabrikasi ninjaFabrikasi = new NinjaFabrikasi();
-        Oyuncu ninja = ninjaFabrikasi.KarakterYarat();
-        Console.WriteLine($"Yeni karakter oluşturuldu: {ninja.Ad}");
-        ninja.Saldir();
-        ninja.Savun();
+        CharacterFactory ninjaFactory = new NinjaFactory();
+        Player ninja = ninjaFactory.CreateCharacter();
+        Console.WriteLine($"New character created: {ninja.Name}");
+        ninja.Attack();
+        ninja.ToDefend();
 
         Console.WriteLine();
 
         // Sihirbaz yaratmak için SihirbazFabrikasi kullanma
-        KarakterFabrikasi sihirbazFabrikasi = new SihirbazFabrikasi();
-        Oyuncu sihirbaz = sihirbazFabrikasi.KarakterYarat();
-        Console.WriteLine($"Yeni karakter oluşturuldu: {sihirbaz.Ad}");
-        sihirbaz.Saldir();
-        sihirbaz.Savun();
+        CharacterFactory MagicianFactory = new MagicianFactory();
+        Player magician = MagicianFactory.CreateCharacter();
+        Console.WriteLine($"New character created: {magician.Name}");
+        magician.Attack();
+        magician.ToDefend();
 
         Console.WriteLine();
 
         // Zırhlı Asker yaratmak için ZirhliAskerFabrikasi kullanma
-        KarakterFabrikasi zirhliAskerFabrikasi = new ZirhliAskerFabrikasi();
-        Oyuncu zirhliAsker = zirhliAskerFabrikasi.KarakterYarat();
-        Console.WriteLine($"Yeni karakter oluşturuldu: {zirhliAsker.Ad}");
-        zirhliAsker.Saldir();
-        zirhliAsker.Savun();
+        CharacterFactory ArmoredSoldierFactory = new ArmoredSoldierFactory();
+        Player armoredsoldier = ArmoredSoldierFactory.CreateCharacter();
+        Console.WriteLine($"New character created: {armoredsoldier.Name}");
+        armoredsoldier.Attack();
+        armoredsoldier.ToDefend();
     }
 }
